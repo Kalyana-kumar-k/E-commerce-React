@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { createContext, useState } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./Components/Home";
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
@@ -32,7 +32,7 @@ function App() {
   return (
     <UserContext.Provider value={{ user }}>
       <Fragment>
-        <BrowserRouter>
+        <Router>
           {/* <ol>
             <li>
               <Link to={"/"}>Home</Link>
@@ -66,7 +66,7 @@ function App() {
             <Route path="/wishlist" element={<WishList />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </BrowserRouter>
+        </Router>
       </Fragment>
     </UserContext.Provider>
   );
