@@ -16,7 +16,7 @@ const UpdateProduct = () => {
   let navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:4000/products/${id}`, { method: "GET" })
+    fetch(`https://fakestoreapi.com/products/${id}`, { method: "GET" })
       .then((response) => {
         return response.json();
       })
@@ -27,7 +27,7 @@ const UpdateProduct = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch(`http://localhost:4000/products/${id}`, {
+    fetch(`https://fakestoreapi.com/products/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

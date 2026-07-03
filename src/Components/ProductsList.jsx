@@ -14,7 +14,7 @@ import { addNewItem } from "../Store/cartSliceReducer";
 const ProductsList = () => {
   //fetch using custom hook- Async Await try catch useFetch.js
   let { products, err, isLoading, setProducts } = useFetch(
-    "http://localhost:4000/products",
+    "https://fakestoreapi.com/products",
   );
   let navigate = useNavigate();
 
@@ -27,7 +27,7 @@ const ProductsList = () => {
   let [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:4000/products", { method: "GET" })
+    fetch("https://fakestoreapi.com/products", { method: "GET" })
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -48,7 +48,7 @@ const ProductsList = () => {
 
   let handleDelete = (id) => {
     if (confirm("Are you sure to revert this?")) {
-      fetch(`http://localhost:4000/products/${id}`, { method: "DELETE" }).then(
+      fetch(`https://fakestoreapi.com/products/${id}`, { method: "DELETE" }).then(
         () => {
           alert("Deleted Successfully");
           let newProductList = products.filter((product) => product.id !== id);
