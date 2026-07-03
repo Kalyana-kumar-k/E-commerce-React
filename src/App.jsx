@@ -32,7 +32,7 @@ function App() {
   return (
     <UserContext.Provider value={{ user }}>
       <Fragment>
-        <Router>
+        <Router basename="/E-commerce-React">
           {/* <ol>
             <li>
               <Link to={"/"}>Home</Link>
