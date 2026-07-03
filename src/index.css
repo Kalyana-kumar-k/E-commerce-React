@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui;
+  box-sizing: border-box;
+}
+.content {
+  user-select: none;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid lightgray;
+}
+.container,
+header,
+footer {
+  width: 600px;
+}
+header,
+footer {
+  text-align: center;
+  color: white;
+  padding: 5px 10px;
+  background-color: orange;
+}
+#inputBox,
+button {
+  outline: none;
+  border: none;
+  font-size: 16px;
+  margin-top: 25px;
+}
+#inputBox {
+  background-color: lightgrey;
+  padding: 5px;
+}
+#addSaveBtn {
+  background-color: blue;
+  width: 50px;
+  padding: 5px;
+  color: white;
+  cursor: pointer;
+}
+#addSaveBtn:hover {
+  background-color: rgb(26, 26, 151);
+}
+#lists {
+  width: 600px;
+  max-height: 500px;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  padding: 15px;
+}
+#lists::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+#lists::-webkit-scrollbar-thumb {
+  background-color: orange;
+  border-radius: 10px;
+  border: 2px solid #edf2f7;
+}
+#lists::-webkit-scrollbar-thumb:hover {
+  background-color: #718096;
+}
+#lists::-webkit-scrollbar-track {
+  background-color: #edf2f7;
+}
+ul {
+  list-style: none;
+}
+ul li {
+  font-size: 18px;
+}
+ul li label {
+  margin-right: 5px;
+}
+#btnEdit {
+  color: teal;
+  outline: none;
+}
+#btnDelete {
+  color: red;
+  outline: none;
+}
+
+/* Products list */
+.loader {
+  animation: spinLoading 1.5s linear infinite;
+}
+@keyframes spinLoading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.procuctsSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.procuctsSection center .card {
+  padding: 15px;
+}
+.productImage {
+  width: 100px;
+  height: 250px;
+  background-size: contain;
+  object-fit: contain;
+}
+.productDescription {
+  height: 200px;
+  overflow: auto;
+}
+.productBtn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
